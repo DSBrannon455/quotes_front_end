@@ -1,5 +1,6 @@
 import './App.css';
 import React, { Component } from 'react'
+import NewForm from './components/NewForm'
 
 console.log(process.env.NODE_ENV)
 let baseUrl = ''
@@ -37,6 +38,14 @@ class App extends Component {
     // fetch()
   }
 
+  addQuote = (newQuote) => {
+    const copyQuotes = [...this.state.quotes]
+    copyQuotes.push(newQuote)
+    this.setState({
+      quotes: copyQuotes, 
+    })
+  }
+
 
   // component lifecycle flowchart
   // https://levelup.gitconnected.com/componentdidmakesense-react-lifecycle-explanation-393dcb19e459
@@ -49,11 +58,12 @@ class App extends Component {
     return (
       <div className="App">
       <h1>Quotes</h1>
+      <NewForm baseUrl={ baseUrl } addQuote={ this.addQuote } />
       <table>
         <tbody>
           { this.state.quotes.map(quote => {
             return (
-              <tr key={quote.id} >
+              <tr key={quote._id} >
                 <td> {quote.quote} </td>
                 <td> {quote.author} </td>
                 <td> {quote.likes} </td>
