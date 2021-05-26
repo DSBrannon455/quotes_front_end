@@ -46,7 +46,36 @@ class App extends Component {
     })
   }
 
+  // USING ASYNC/AWAIT
+  deleteQuote = async (id)=>{
 
+    const url = baseUrl + "/quotes/" + id
+    
+    try{
+
+
+      const response = await fetch(url, {method: "DELETE"})
+
+
+      if (response.status === 200){
+ 
+        const index = this.state.quotes.findIndex(quote => quote._id === id)
+        const copyQuotes = [...this.state.quotes]
+
+        copyQuotes.splice(index, 1)
+
+        this.setState({
+          quotes: copyQuotes
+        })
+      }
+
+    }
+    catch(err){
+      console.log('error: ', err)
+    }  
+  }
+  
+   
   // component lifecycle flowchart
   // https://levelup.gitconnected.com/componentdidmakesense-react-lifecycle-explanation-393dcb19e459
   componentDidMount() {
@@ -57,7 +86,7 @@ class App extends Component {
     console.log(this.state.quotes)
     return (
       <div className="App">
-      <h1>Quotes</h1>
+      <h1>Favorite Quotes</h1>
       <NewForm baseUrl={ baseUrl } addQuote={ this.addQuote } />
       <table>
         <tbody>
@@ -67,6 +96,7 @@ class App extends Component {
                 <td> {quote.quote} </td>
                 <td> {quote.author} </td>
                 <td> {quote.likes} </td>
+                <td onClick={()=> this.deleteQuote(quote._id)}>X</td>
               </tr>
               )
             })
