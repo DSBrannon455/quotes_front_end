@@ -27,7 +27,7 @@ export default class NewForm extends React.Component {
         // fetch
         fetch(this.props.baseUrl + '/quotes', {
             method: 'POST',
-            body: JSON.stringify({quote: this.state.quote}),
+            body: JSON.stringify({quote: this.state.quote, author: this.state.author}),
             headers: {
                 'Content-Type': 'application/json'
             }
