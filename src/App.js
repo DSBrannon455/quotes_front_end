@@ -2,16 +2,20 @@ import './App.css';
 import React, { Component } from 'react'
 import NewForm from './components/NewForm'
 
-console.log(process.env.NODE_ENV)
-let baseUrl = ''
+// console.log(process.env.NODE_ENV)
+// let baseUrl = ''
 
 // more on React environment variables
 // https://create-react-app.dev/docs/adding-custom-environment-variables/
-if (process.env.NODE_ENV === 'development') {
-  baseUrl = 'http://localhost:3003'
-} else {
-  baseUrl = 'heroku url here'
-}
+// if (process.env.NODE_ENV === 'development') {
+//   baseUrl = 'http://localhost:3003'
+// } else {
+//   baseUrl = 'heroku url here'
+// }
+
+let baseUrl = process.env.REACT_APP_BASEURL
+// let baseUrl = 'http://localhost:3003'
+console.log(baseUrl)
 
 
 class App extends Component {
