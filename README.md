@@ -1,4 +1,25 @@
-# Getting Started with Create React App
+# quotes_front_end
+
+Link to your hosted working app:
+<!-- link syntax  -->
+[hi](https://quotes-front-end.herokuapp.com/)
+
+I became discouraged early in this bootcamp.  I find quotes from others to be uplifting and inspirational, so I thought I would make an app where people could add their favorite quotes.  Then they could also like quotes submitted by others.  Henry Ford said, "Whether you think you can or you think you can't, you're right."  I thought I could.
+
+This app is a MERN stack: Mongo, Express, React, node.js.
+
+- When the user opens the app, a page will be displayed to enter a quote and an author.
+- The user can then click on the "Add a Quote" button to have the quote and author dipslay on the page.
+- The user can click on the "X" to delete the quote.
+- The user can click on "Like" to like a quote.
+- The user can double click the quote and it grays out to show it has been read.
+- If the user double clicks on the quote again, it will become bold once again.
+
+![frame](wireframe/quotes.png)
+
+In the future, I want to add more styling!
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +88,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
+# quotes_front_end
+
+<!-- link syntax  -->
+[hi](https://google.com)
+
+- When the user opens the app, a page will be displayed to enter a quote and an author.
+- The user can then click on the "Add a Quote" button to have the quote and author dipslay on the page.
+- The user can click on the "X" to delete the quote.
+- The user can click on "Like" to like a quote.
+- The user can double click the quote and it grays out to show it has been read.
+- If the user double clicks on the quote again, it will become bold once again.
+
+![frame](wireframe/quotes.png)
